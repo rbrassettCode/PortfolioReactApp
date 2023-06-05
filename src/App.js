@@ -11,6 +11,7 @@ import Footer from './Footer';
 import './pages/Weather.css';
 import './App.css';
 import TodoList from './pages/Todo';
+import Blog from './pages/Blog';
 
 function App() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -43,6 +44,7 @@ function App() {
           </Dropdown>
         
           <Nav.Link href="/contact">Contact</Nav.Link>
+          <Nav.Link href="/blog">Blog</Nav.Link>
         </Nav>
       </Navbar>
       <br />
@@ -51,6 +53,7 @@ function App() {
         <Route path="/portfolio/Weather" element={<Weather/>} />
         <Route path="/portfolio/TodoList" element={<TodoList/>} />
         <Route path="/contact" element={<Contact/>} />
+        <Route path="/blog" element={<Blog/>} />
       </Routes>
       <Footer/>
     </Router>
