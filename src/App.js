@@ -42,9 +42,8 @@ function App() {
               <Dropdown.Item href="/portfolio/TodoList">To Do List</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
-        
-          <Nav.Link href="/contact">Contact</Nav.Link>
           <Nav.Link href="/blog">Blog</Nav.Link>
+          <Nav.Link href="/contact">Contact</Nav.Link>
         </Nav>
       </Navbar>
       <br />
@@ -52,8 +51,8 @@ function App() {
         <Route path="/" element={<HomePage/>} />
         <Route path="/portfolio/Weather" element={<Weather/>} />
         <Route path="/portfolio/TodoList" element={<TodoList/>} />
-        <Route path="/contact" element={<Contact/>} />
         <Route path="/blog" element={<Blog/>} />
+        <Route path="/contact" element={<Contact/>} />
       </Routes>
       <Footer/>
     </Router>
