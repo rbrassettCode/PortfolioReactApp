@@ -1,0 +1,35 @@
+.project-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;  /* Rounded edges */
+    width: 300px;  /* Width of the card */
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    transition: transform 0.2s;  /* Smooth hover effect */
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 100px; /* Keeps image and other content inside the boundaries of the rounded edges */
+}
+
+.project-card:hover {
+    transform: scale(1.05);  /* Slightly enlarges the card on hover */
+}
+
+.project-image {
+    width: 70%;
+    height: 180px;
+    object-fit: cover;  /* Covers the entire image area without distortion */
+    border-radius: 8px;  /* Optional: rounded edges for images */
+    margin-bottom: 15px;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.project-text {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
