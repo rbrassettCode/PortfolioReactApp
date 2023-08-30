@@ -20,7 +20,7 @@ function Projects() {
     ];
 
     return (
-        <div className="projects-container">
+        <div className="projects-container" style={{display: "flex"}} >
             {projectData.map((project, index) => (
                 <ProjectCard 
                     key={index}
