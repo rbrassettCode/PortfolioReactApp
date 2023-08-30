@@ -11,7 +11,6 @@ import Footer from './Footer';
 import './pages/Weather.css';
 import './App.css';
 import TodoList from './pages/Todo';
-import Blog from './pages/Blog';
 
 function App() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
