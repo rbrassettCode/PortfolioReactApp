@@ -1,6 +1,13 @@
 .delete-button {
     display: none;
   }
+.todo-container {
+  text-align: center;
+}
+ul {
+  list-style-type: none;
+  padding-top: 10px;
+}
   
   li:hover .delete-button {
     background-color: transparent;
