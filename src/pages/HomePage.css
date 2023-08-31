@@ -1,16 +1,27 @@
 .container {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
+    text-align: center;
   }
   
-  img {
-    width: 50%; /* Adjust this value to fit your image */
+.image-container {
+    display: flex;
+    
+  }
+  .image-text {
+    align-items: center;
+    padding-top: 200px;
+  }
+  
+  img{
+    overflow: hidden;
+    border-radius: 50%;
+    width: 50%; 
+    padding: 10px;
   }
   
   .text-box {
-    width: 50%; /* Adjust this value to fit your text box */
-    padding: 10px; /* Adjust this value to add padding around your text */
+    padding: 10px; 
+    text-align: center;
   }

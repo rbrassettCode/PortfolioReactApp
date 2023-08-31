@@ -1,7 +1,8 @@
 .link-text{
-    color: black;
+    color: white;
     font-size: 1.5rem;
     text-decoration: none;
+    padding: 10px;
 }
 
 .text{
@@ -9,4 +10,8 @@
     font-size: 1.5rem;
     text-decoration: none;
     margin-bottom: 50px;
+}
+
+.navbar{
+    color: white;
 }

@@ -23,7 +23,6 @@ function App() {
         <Nav className="mr-auto">
         <Nav.Link href="/">Home</Nav.Link>
         <Nav.Link href="/portfolio">Projects</Nav.Link>
-        <Nav.Link href="/contact">Contact</Nav.Link>
         </Nav>
       </Navbar>
       <br />
@@ -32,7 +31,6 @@ function App() {
         <Route path="/portfolio" element={<Projects/>} />
         <Route path="/portfolio/Weather" element={<Weather/>} />
         <Route path="/portfolio/TodoList" element={<TodoList/>} />
-        <Route path="/contact" element={<Contact/>} />
       </Routes>
       <Footer/>
     </Router>
