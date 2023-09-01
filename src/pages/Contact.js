@@ -6,7 +6,6 @@ function Contact() {
     <div className="contact">
       <div className="center-content">
         <h2>Contact</h2>
-        <p>Feel free to reach out to me!</p>
         <a href="mailto:rbrassett@outlook.com" target="_blank" className='link-text'>rbrassett@outlook.com</a>
         <br />
         <div className="center-content">

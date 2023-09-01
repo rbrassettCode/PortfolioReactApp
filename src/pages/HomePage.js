@@ -12,11 +12,9 @@ function HomePage() {
         </div>
         <br />
         <div className='text-box'>
-          
-          <p>My name is Robert Brassett, and I'm a software developer with 2 years of experience. I have a passion for building efficient software solutions that solve real-world problems.</p>
-          <p>Throughout my career, I have worked primarily with backend systems using Spring Boot. I specialize in Java, and I am constantly learning and exploring new technologies to improve my skills.</p>
-          <p>Outside of work, I enjoy taking my dog on long hikes, rock climbing and leasure bike rides around town. I find that this helps me to stay creative and maintain a healthy work-life balance.</p>
-          <p>Thank you for taking the time to read about me. If you'd like to learn more about my experience or discuss a potential project, please don't hesitate to get in touch!</p>
+          <p>I'm Robert Brassett, a software developer with a keen knack for crafting efficient software that addresses genuine challenges. With 3 years under my belt, I've extensively worked on backend systems, especially with Spring Boot. Java is my forte, but I'm a firm believer in continuous learning and regularly dive into new technologies to sharpen my skill set.</p>
+          <p>Beyond the digital realm, I cherish the great outdoors. Whether it's embarking on extensive hikes with my canine companion, scaling rocky terrains through rock climbing, or simply soaking in the local scenery on leisurely bike rides, these activities fuel my creativity and ensure I strike the right work-life balance. </p>
+          <p>Should you wish to dive deeper into my experience or brainstorm about a potential collaboration, I'm just a message away. Thanks for stopping by!</p>
         </div>
         <br />
         <Contact />
