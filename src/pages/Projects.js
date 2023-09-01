@@ -2,6 +2,7 @@ import React from "react";
 import ProjectCard from './ProjectCard';
 import weatherIcon from '../images/weather_icon.png';
 import todoIcon from '../images/to-do-list.png';
+import './Projects.css';
 
 function Projects() {
     const projectData = [
