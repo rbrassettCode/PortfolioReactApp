@@ -10,7 +10,21 @@ function Weather() {
 
   const getWeather = async () => {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`;
-    const response = await axios.get(url);
+    const response = await axios.get(url)
+    .catch(function (error) {
+      alert("City not found, please try again");
+      if (error.response) {
+        console.log(error.response.data);
+        console.log(error.response.status);
+        console.log(error.response.headers);
+      } else if (error.request) {
+        
+        console.log(error.request);
+      } else {
+        console.log('Error', error.message);
+      }
+    });
+    
     setWeather(response.data);
   };
 
@@ -26,6 +40,13 @@ function Weather() {
   return (
     <div className="weather-container">
       <h1>Enter the name of any major city to see the current weather</h1>
+      <p>For this project, my goal was to test calling third party API's in React. To do this I call the GET API hosted by openweathermap.org and return the corresponding data to the window. I also added some exception handling to handle 404 and timeout errors from the weather API to ensure the user is aware of the failure.</p>
+      <p>To see the code and learn how I design my solutions visit my github page here:</p>
+      <a href="https://github.com/rbrassettCode/PortfolioReactApp/blob/main/src/pages/Weather.js" target="_blank" className='footer-text'>
+        <i className="fab fa-github social-icon"></i>
+         
+      </a>
+      <br/>
       <form className="form-container" onSubmit={handleSubmit}>
         <input className="city-input" type="text" value={city} onChange={handleCityChange} placeholder="Enter a city" />
         <p/>
