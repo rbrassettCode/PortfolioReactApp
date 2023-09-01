@@ -7,8 +7,8 @@ function HomePage() {
     return (
       <div className='container'>
         <div className='image-container'>
-        <img className='image-profile-pic' src={imageSrc} alt="profile-pic" />
-        <h2 className='image-text'>Hi there!</h2>
+          <img className='image-profile-pic' src={imageSrc} alt="profile-pic" />
+          <h2 className='image-text'>Hi there!</h2>
         </div>
         <br />
         <div className='text-box'>
