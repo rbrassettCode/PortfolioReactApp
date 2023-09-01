@@ -7,7 +7,7 @@ function HomePage() {
     return (
       <div className='container'>
         <div className='image-container'>
-        <img  src={imageSrc} alt="profile-pic" />
+        <img className='image-profile-pic' src={imageSrc} alt="profile-pic" />
         <h2 className='image-text'>Hi there!</h2>
         </div>
         <br />

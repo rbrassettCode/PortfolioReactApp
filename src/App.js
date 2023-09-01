@@ -5,24 +5,23 @@ import { Navbar, Nav } from 'react-bootstrap';
 import { BsFillGridFill } from 'react-icons/bs';
 
 import HomePage from './pages/HomePage';
-import Contact from './pages/Contact';
 import Footer from './Footer';
 import './pages/Weather.css';
 import './App.css';
 import TodoList from './pages/Todo';
 import Projects from './pages/Projects';
+import AboutMe from './pages/AboutMe';
+import initialsIcon from './images/initials-icon.png';
 
 function App() {
   return (
     <Router >
-      <Navbar bg="dark" variant="dark">
-        <Navbar.Brand href="/">
-          <BsFillGridFill className="d-inline-block align-top" />{' '} 
-          Robert Brassett
-        </Navbar.Brand>
+      <Navbar bg="dark" variant="dark"> 
+          <img className='image-navbar' src={initialsIcon} alt='initialsIcon'/>
         <Nav className="mr-auto">
-        <Nav.Link href="/">Home</Nav.Link>
-        <Nav.Link href="/portfolio">Projects</Nav.Link>
+          <Nav.Link href="/">Home</Nav.Link>
+          <Nav.Link href="/portfolio">Projects</Nav.Link>
+          <Nav.Link href="/aboutMe">About Me</Nav.Link>
         </Nav>
       </Navbar>
       <br />
@@ -31,6 +30,7 @@ function App() {
         <Route path="/portfolio" element={<Projects/>} />
         <Route path="/portfolio/Weather" element={<Weather/>} />
         <Route path="/portfolio/TodoList" element={<TodoList/>} />
+        <Route path="/aboutMe" element={<AboutMe/>} />
       </Routes>
       <Footer/>
     </Router>
