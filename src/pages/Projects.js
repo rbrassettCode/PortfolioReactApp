@@ -2,6 +2,7 @@ import React from "react";
 import ProjectCard from './ProjectCard';
 import weatherIcon from '../images/weather_icon.png';
 import todoIcon from '../images/to-do-list.png';
+import wordleIcon from '../images/Wordle_icon.webp'
 import './Projects.css';
 
 function Projects() {
@@ -18,6 +19,12 @@ function Projects() {
             imageUrl: todoIcon,
             routelink: "/portfolio/ToDoList"
         },
+        {
+            title: "Wordle",
+            description: "I made a clone of the popular game wordle.",
+            imageUrl: wordleIcon,
+            routelink: "/portfolio/Wordle"
+        }
     ];
 
     return (

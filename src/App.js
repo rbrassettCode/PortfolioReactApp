@@ -12,6 +12,8 @@ import TodoList from './pages/Todo';
 import Projects from './pages/Projects';
 import AboutMe from './pages/AboutMe';
 import initialsIcon from './images/initials-icon.png';
+import TaskBoard from './pages/TaskBoard';
+import Wordle from './pages/Wordle';
 
 function App() {
   return (
@@ -31,6 +33,7 @@ function App() {
         <Route path="/portfolio/Weather" element={<Weather/>} />
         <Route path="/portfolio/TodoList" element={<TodoList/>} />
         <Route path="/aboutMe" element={<AboutMe/>} />
+        <Route path="/portfolio/Wordle" element={<Wordle/>} />
       </Routes>
       <Footer/>
     </Router>
