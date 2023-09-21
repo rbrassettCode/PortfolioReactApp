@@ -2,7 +2,7 @@ import React from "react";
 import ProjectCard from './ProjectCard';
 import weatherIcon from '../images/weather_icon.png';
 import todoIcon from '../images/to-do-list.png';
-import wordleIcon from '../images/Wordle_icon.webp'
+import wordleIcon from '../images/wordle_icon.png'
 import './Projects.css';
 
 function Projects() {
