@@ -12,7 +12,6 @@ import TodoList from './pages/Todo';
 import Projects from './pages/Projects';
 import AboutMe from './pages/AboutMe';
 import initialsIcon from './images/initials-icon.png';
-import TaskBoard from './pages/TaskBoard';
 import Wordle from './pages/Wordle';
 
 function App() {

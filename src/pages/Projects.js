@@ -15,7 +15,7 @@ function Projects() {
         },
         {
             title: "To Do List",
-            description: "A simple application where you can create and delte tasks that you need to complete that are saved under local storage so they are not lost.",
+            description: "A simple application where you can create and delete tasks that you need to complete that are saved under local storage so they are not lost.",
             imageUrl: todoIcon,
             routelink: "/portfolio/ToDoList"
         },
