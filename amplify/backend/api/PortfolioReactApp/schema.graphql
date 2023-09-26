@@ -1,0 +1,17 @@
+enum TaskStatus {
+  TODO
+  IN_PROGRESS
+  COMPLETE
+  BLOCKED
+}
+
+type Task @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  title: String!
+  status: TaskStatus!
+  description: String
+  start_date: AWSDate!
+  expected_end_date: AWSDate
+  end_date: AWSDate
+  priority: Int
+}
