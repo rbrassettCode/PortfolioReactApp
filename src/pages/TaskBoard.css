@@ -1,0 +1,15 @@
+.task-board{
+    display: flex;
+    padding: 10px;
+    gap: 20px;
+}
+.task-board-column{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #0035B7;
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import './ProjectCard.css';
 
 
-function TaskCard({ title, description}) {
+function TaskCard({ id, title, description}) {
    
     return (
         <div className="project-card">

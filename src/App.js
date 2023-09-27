@@ -14,8 +14,13 @@ import AboutMe from './pages/AboutMe';
 import initialsIcon from './images/initials-icon.png';
 import Wordle from './pages/Wordle';
 import TaskBoard from './pages/TaskBoard';
+import {Amplify} from 'aws-amplify';
+import awsconfig from './aws-exports';
 
 function App() {
+  
+  Amplify.configure(awsconfig);
+  
   return (
     <Router >
       <Navbar bg="dark" variant="dark"> 
