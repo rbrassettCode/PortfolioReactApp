@@ -13,6 +13,7 @@ import Projects from './pages/Projects';
 import AboutMe from './pages/AboutMe';
 import initialsIcon from './images/initials-icon.png';
 import Wordle from './pages/Wordle';
+import TaskBoard from './pages/TaskBoard';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         <Route path="/portfolio/TodoList" element={<TodoList/>} />
         <Route path="/aboutMe" element={<AboutMe/>} />
         <Route path="/portfolio/Wordle" element={<Wordle/>} />
+        <Route path="/portfolio/TaskBoard" element={<TaskBoard/>} />
       </Routes>
       <Footer/>
     </Router>
