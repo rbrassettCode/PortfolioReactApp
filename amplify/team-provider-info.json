@@ -10,6 +10,11 @@
       "StackName": "amplify-amplify07df5cfcf80b4-staging-180958",
       "StackId": "arn:aws:cloudformation:us-east-2:449270299139:stack/amplify-amplify07df5cfcf80b4-staging-180958/e78a9460-5c97-11ee-b679-02a381f54a21",
       "AmplifyAppId": "d2dnsc14m42k2j"
+    },
+    "categories": {
+      "api": {
+        "PortfolioReactApp": {}
+      }
     }
   }
 }

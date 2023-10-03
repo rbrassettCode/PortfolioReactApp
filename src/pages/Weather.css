@@ -16,7 +16,7 @@
   button[type="submit"] {
     font-size: 1.2rem;
     padding: 0.5rem 1rem;
-    background-color: #0077be;
+    background-color: #0035B7;;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -24,7 +24,7 @@
   }
   
   button[type="submit"]:hover {
-    background-color: #0061a5;
+    background-color: #002C7A;
   }
   
   .weather-container {

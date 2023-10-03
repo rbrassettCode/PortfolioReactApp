@@ -1,12 +1,15 @@
 import React, {useState, useEffect} from "react";
 import { API } from "aws-amplify";
 import { listTasks } from "./../graphql/queries.js";
+import { createToDo } from './../graphql/mutations';
 import TaskCard from './TaskCard';
 import './TaskBoard.css';
+import CreateTaskModal from "./CreateTaskModal.js";
 
 
 function TaskBoard() {
     const [allTasks, setDataList] = useState([]);
+    const [isModalOpen, setModalOpen] = useState(false);
 
     useEffect(() => {
         async function fetchData() {
@@ -21,10 +24,20 @@ function TaskBoard() {
         }
         fetchData();
     }, []);
+
+    function removeTaskFromState(taskId) {
+        setDataList(prevTasks => prevTasks.filter(task => task.id !== taskId));
+    }
+
+    function addTaskFromState(task) {
+        console.log("Adding task: ", task);
+        setDataList(prevTasks => [...prevTasks, task]);
+    }
     
-     
     return (
         <div>
+            <button type='submit' onClick={() => setModalOpen(true)}>Create Task</button>
+            <CreateTaskModal addTaskFromState={addTaskFromState} isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
             <div className="task-board-container">
                 <h2>Task Board</h2>
                 <div className="task-board">
@@ -35,8 +48,10 @@ function TaskBoard() {
                         .map((task) => (
                             <TaskCard 
                             key={task.id}
+                            id={task.id}
                             title={task.title}
                             description={task.description}
+                            onTaskDeleted={removeTaskFromState}
                             />))}
                     </div>
                     <div className="task-board-column">
@@ -46,8 +61,10 @@ function TaskBoard() {
                         .map((task) => (
                             <TaskCard 
                             key={task.id}
+                            id={task.id}
                             title={task.title}
                             description={task.description}
+                            onTaskDeleted={removeTaskFromState}
                             />))}
                     </div>
                     <div className="task-board-column">
@@ -57,8 +74,10 @@ function TaskBoard() {
                         .map((task) => (
                             <TaskCard 
                             key={task.id}
+                            id={task.id}
                             title={task.title}
                             description={task.description}
+                            onTaskDeleted={removeTaskFromState}
                             />))}
                     </div>
                 </div>
