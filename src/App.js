@@ -16,6 +16,7 @@ import Wordle from './pages/Wordle';
 import TaskBoard from './pages/TaskBoard';
 import {Amplify} from 'aws-amplify';
 import awsconfig from './aws-exports';
+import PlantMonitor from './pages/PlantMonitor';
 
 function App() {
   
@@ -40,6 +41,8 @@ function App() {
         <Route path="/aboutMe" element={<AboutMe/>} />
         <Route path="/portfolio/Wordle" element={<Wordle/>} />
         <Route path="/portfolio/TaskBoard" element={<TaskBoard/>} />
+        <Route path="/portfolio/PlantMonitor" element={<PlantMonitor/>} />
+
       </Routes>
       <Footer/>
     </Router>

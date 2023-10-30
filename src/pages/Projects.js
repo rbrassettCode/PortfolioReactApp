@@ -3,6 +3,7 @@ import ProjectCard from './ProjectCard';
 import weatherIcon from '../images/weather_icon.png';
 import todoIcon from '../images/to-do-list.png';
 import wordleIcon from '../images/wordle_icon.png'
+import rpiIcon from '../images/raspberry_icon.png'
 import './Projects.css';
 
 function Projects() {
@@ -24,7 +25,13 @@ function Projects() {
             description: "I made a clone of the popular game wordle.",
             imageUrl: wordleIcon,
             routelink: "/portfolio/Wordle"
-        }
+        },
+        {
+            title: "Plant Monitor",
+            description: "IoT project to keep my plants alive and view the data",
+            imageUrl: rpiIcon,
+            routelink: "/portfolio/PlantMonitor"
+        },
     ];
 
     return (

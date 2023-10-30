@@ -1,6 +1,54 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const onCreatePlantStatus = /* GraphQL */ `
+  subscription OnCreatePlantStatus(
+    $filter: ModelSubscriptionPlantStatusFilterInput
+  ) {
+    onCreatePlantStatus(filter: $filter) {
+      id
+      moisture
+      temperature
+      time
+      watered
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onUpdatePlantStatus = /* GraphQL */ `
+  subscription OnUpdatePlantStatus(
+    $filter: ModelSubscriptionPlantStatusFilterInput
+  ) {
+    onUpdatePlantStatus(filter: $filter) {
+      id
+      moisture
+      temperature
+      time
+      watered
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const onDeletePlantStatus = /* GraphQL */ `
+  subscription OnDeletePlantStatus(
+    $filter: ModelSubscriptionPlantStatusFilterInput
+  ) {
+    onDeletePlantStatus(filter: $filter) {
+      id
+      moisture
+      temperature
+      time
+      watered
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
 export const onCreateToDo = /* GraphQL */ `
   subscription OnCreateToDo($filter: ModelSubscriptionToDoFilterInput) {
     onCreateToDo(filter: $filter) {

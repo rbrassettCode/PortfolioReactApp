@@ -1,3 +1,11 @@
+type PlantStatus @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  moisture: Float
+  temperature: Int
+  time: AWSDateTime
+  watered: Boolean
+}
+
 type ToDo @model @auth(rules: [{allow: public}]) {
   id: ID!
   title: String!

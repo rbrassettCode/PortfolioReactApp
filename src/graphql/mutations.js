@@ -1,6 +1,57 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
+export const createPlantStatus = /* GraphQL */ `
+  mutation CreatePlantStatus(
+    $input: CreatePlantStatusInput!
+    $condition: ModelPlantStatusConditionInput
+  ) {
+    createPlantStatus(input: $input, condition: $condition) {
+      id
+      moisture
+      temperature
+      time
+      watered
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const updatePlantStatus = /* GraphQL */ `
+  mutation UpdatePlantStatus(
+    $input: UpdatePlantStatusInput!
+    $condition: ModelPlantStatusConditionInput
+  ) {
+    updatePlantStatus(input: $input, condition: $condition) {
+      id
+      moisture
+      temperature
+      time
+      watered
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
+export const deletePlantStatus = /* GraphQL */ `
+  mutation DeletePlantStatus(
+    $input: DeletePlantStatusInput!
+    $condition: ModelPlantStatusConditionInput
+  ) {
+    deletePlantStatus(input: $input, condition: $condition) {
+      id
+      moisture
+      temperature
+      time
+      watered
+      createdAt
+      updatedAt
+      __typename
+    }
+  }
+`;
 export const createToDo = /* GraphQL */ `
   mutation CreateToDo(
     $input: CreateToDoInput!
