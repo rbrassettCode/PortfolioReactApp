@@ -1,5 +1,5 @@
 import React from "react";
-import './AboutMe.css'
+import './../Stylesheet.css';
 import { CgCPlusPlus } from "react-icons/cg";
 import {
   DiJavascript1,

@@ -4,7 +4,7 @@ import weatherIcon from '../images/weather_icon.png';
 import todoIcon from '../images/to-do-list.png';
 import wordleIcon from '../images/wordle_icon.png'
 import rpiIcon from '../images/raspberry_icon.png'
-import './Projects.css';
+import './../Stylesheet.css';
 
 function Projects() {
     const projectData = [

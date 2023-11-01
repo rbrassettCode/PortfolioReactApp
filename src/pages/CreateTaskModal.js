@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './CreateTaskModal.css'; 
+import './../Stylesheet.css';
 import { API } from "aws-amplify";
 import { createTask } from './../graphql/mutations';
 

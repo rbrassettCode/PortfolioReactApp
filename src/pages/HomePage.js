@@ -1,5 +1,5 @@
 import React from 'react';
-import './HomePage.css';
+import './../Stylesheet.css';
 import imageSrc from '../images/profile-pic.jpg'
 import Contact from './Contact';
 

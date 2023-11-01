@@ -1,5 +1,5 @@
 import React from 'react';
-import './ProjectCard.css';
+import './../Stylesheet.css';
 import { API } from "aws-amplify";
 import { deleteTask } from './../graphql/mutations';
 

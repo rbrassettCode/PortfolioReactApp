@@ -1,0 +1,483 @@
+/*
+    Footer.css
+*/
+
+.footer {
+    background-color: rgba(33, 37, 41);
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    text-align: right;
+}
+
+.footer-text {
+    color: white;
+    font-size: 1.5rem;
+    padding: 10px;
+    text-decoration: none;
+}
+
+/*
+    AboutMe.css
+*/
+.coding-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    /* Rounded edges */
+    padding: 20px;
+    padding-top: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Adds a subtle shadow */
+    transition: transform 0.2s;
+    /* Smooth hover effect */
+    overflow: hidden;
+    font-size: 4.5em !important;
+    margin: 10px !important;
+    padding: 10px !important;
+    opacity: 0.93 !important;
+    border-radius: 5px !important;
+    overflow: hidden !important;
+    transition: all 0.4s ease 0s !important;
+    flex: 0 0 130px;
+
+}
+
+.coding-card:hover {
+    transform: scale(1.05);
+    /* Slightly enlarges the card on hover */
+}
+
+.coding-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1%;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+.about-me-title {
+    text-align: center;
+}
+
+.about-me-text {
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+/*
+    Contact.css
+*/
+
+.contact {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 100px;
+    margin-bottom: 100px;
+    padding: 10px;
+}
+
+.center-content {
+    text-align: center;
+    padding: 10px;
+}
+
+.social-logo {
+    width: 20px;
+    height: 20px;
+}
+
+/*
+    CreateTaskModal.css
+*/
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.close-button {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 10px;
+    border-radius: 8px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #ffffff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    display: block;
+    font-weight: 600;
+}
+
+.modal-text,
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+/*
+    HomePage.css
+*/
+
+.container {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.image-text {
+    align-items: center;
+    padding-top: 200px;
+}
+
+.image-profile-pic {
+    overflow: hidden;
+    border-radius: 220px;
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+}
+
+.text-box {
+    padding: 10px;
+    text-align: center;
+}
+
+/*
+  PlantChart.css
+*/
+.chart-box {
+    background: white;
+}
+
+.plant-monitor {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.plant-title {
+    padding-top: 10px;
+    font-size: 1.5rem;
+
+}
+
+.plant-text {
+    padding-left: 15px;
+}
+
+.plant-text-box {
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 1.2rem;
+}
+
+/*
+    ProjectCard.css
+*/
+
+.project-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    /* Rounded edges */
+    width: 300px;
+    /* Width of the card */
+    padding: 20px;
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Adds a subtle shadow */
+    transition: transform 0.2s;
+    /* Smooth hover effect */
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 100px;
+    /* Keeps image and other content inside the boundaries of the rounded edges */
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    /* Slightly enlarges the card on hover */
+}
+
+.project-image {
+    width: 70%;
+    height: 180px;
+    object-fit: contain;
+    /* Covers the entire image area without distortion */
+    border-radius: 8px;
+    /* Optional: rounded edges for images */
+    margin-bottom: 15px;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.project-text {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.project-card:hover .delete-button {
+    background-color: transparent;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    outline: none;
+    padding: 0;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+/*
+  Projects.css
+*/
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+
+/*
+    TaskBoard.css
+*/
+
+.task-board {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 20px;
+}
+
+.task-board-column {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #0035B7;
+}
+
+/*
+    Todo.css
+*/
+
+.delete-button {
+    display: none;
+}
+
+.todo-container {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+    padding-top: 10px;
+}
+
+li:hover .delete-button {
+    background-color: transparent;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    outline: none;
+    padding: 0;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+/*
+  Weather.css
+*/
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+input[type="text"] {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+}
+
+button[type="submit"] {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    background-color: #0035B7;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #002C7A;
+}
+
+.weather-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 0;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+}
+
+/*
+  Wordle.css
+*/
+
+.wordle-container {
+    padding: 40px;
+    background-color: black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    margin: 0 auto;
+}
+
+.input-boxes {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.input-boxes input {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    border: 1px solid #7f7f7f;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 0;
+    margin: 0 2px;
+}
+
+.wordle-button {
+    padding: 10px;
+    background-color: #7f7f7f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+.wordle-button:hover {
+    background-color: #5a5a5a;
+}
+
+.guesses {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.guess-letter {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.guess-letter[color="green"] {
+    color: white;
+    background-color: #008000;
+}
+
+.guess-letter[color="yellow"] {
+    color: black;
+    background-color: #ffff00;
+}
+
+.guess-letter[color="gray"] {
+    color: #7f7f7f;
+}

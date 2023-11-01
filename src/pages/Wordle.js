@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Wordle.css';
+import './../Stylesheet.css';
 
 function Wordle() {
     const [word, setWord] = useState(pickRandomWord());

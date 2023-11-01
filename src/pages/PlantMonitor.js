@@ -2,8 +2,7 @@ import React, {useState, useEffect} from "react";
 import { API } from "aws-amplify";
 import { listPlantStatuses } from "./../graphql/queries.js";
 import PlantChart from "./PlantChart";
-import './PlantChart.css'
-
+import './../Stylesheet.css';
 
 function PlantMonitor() {
 

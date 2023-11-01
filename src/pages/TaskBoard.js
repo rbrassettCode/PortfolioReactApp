@@ -3,7 +3,7 @@ import { API } from "aws-amplify";
 import { listTasks } from "./../graphql/queries.js";
 import { createToDo } from './../graphql/mutations';
 import TaskCard from './TaskCard';
-import './TaskBoard.css';
+import './../Stylesheet.css';
 import CreateTaskModal from "./CreateTaskModal.js";
 
 

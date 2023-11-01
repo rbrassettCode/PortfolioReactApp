@@ -6,7 +6,7 @@ import { BsFillGridFill } from 'react-icons/bs';
 
 import HomePage from './pages/HomePage';
 import Footer from './Footer';
-import './pages/Weather.css';
+import './Stylesheet.css';
 import './App.css';
 import TodoList from './pages/Todo';
 import Projects from './pages/Projects';
