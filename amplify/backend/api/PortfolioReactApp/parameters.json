@@ -2,5 +2,5 @@
   "AppSyncApiName": "PortfolioReactApp",
   "DynamoDBBillingMode": "PAY_PER_REQUEST",
   "DynamoDBEnableServerSideEncryption": false,
-  "AuthModeLastUpdated": "2023-09-28T15:23:31.393Z"
+  "AuthModeLastUpdated": "2023-11-10T19:48:55.582Z"
 }
