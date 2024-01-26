@@ -1,7 +1,7 @@
 import Weather from './pages/Weather';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Routes ,Route } from 'react-router-dom';
-import { Navbar, Nav } from 'react-bootstrap';
+import { Navbar, Nav, Image } from 'react-bootstrap';
 import { BsFillGridFill } from 'react-icons/bs';
 
 import HomePage from './pages/HomePage';
@@ -25,7 +25,7 @@ function App() {
   return (
     <Router >
       <Navbar bg="dark" variant="dark"> 
-          <img className='image-navbar' src={initialsIcon} alt='initialsIcon'/>
+          <Image fluid  src={initialsIcon} alt='initialsIcon'/>
         <Nav className="mr-auto">
           <Nav.Link href="/">Home</Nav.Link>
           <Nav.Link href="/portfolio">Projects</Nav.Link>

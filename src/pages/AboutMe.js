@@ -13,7 +13,12 @@ import {
   SiPostgresql,
 } from "react-icons/si";
 import { TbBrandGolang } from "react-icons/tb";
-import { Col, Container, Row } from "react-bootstrap";
+import { Card, Carousel, Col, Container, Row, Image } from "react-bootstrap";
+import hikingSrc from '../images/camping-pic.jpg';
+import snowShooingSrc from '../images/snowshoeing-pic.jpg';
+import cottageSrc from '../images/cottage-pic.jpg';
+import climbingSrc from '../images/banff-pic.jpg';
+
 
 function AboutMe() {
     return (
@@ -68,6 +73,39 @@ function AboutMe() {
                         <CgCPlusPlus />
                     </div>
                     </div>
+                </Col>
+            </Row>
+            <Row>
+                <h2>My Adventures</h2>
+            </Row>
+            <Row>
+                <Col lg={6} className="col-12 mx-auto">
+                    <Carousel fade interval={10000}>
+                        <Carousel.Item>
+                            <Image fluid rounded src={hikingSrc} alt="hiking-mont-tremblant" />
+                            <Carousel.Caption>
+                                <h3>Hiking in Mont Tremblant Quebec</h3>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <Image fluid rounded src={snowShooingSrc} alt="snowshoeing-ottawa-river" />
+                            <Carousel.Caption>
+                                <h3>Snow Shoeing on the Ottawa River</h3>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <Image fluid rounded src={cottageSrc} alt="cottage-lake" />
+                            <Carousel.Caption>
+                                <h3>Enjoying the lake with Lola</h3>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <Image fluid rounded src={climbingSrc} alt="hiking-banff" />
+                            <Carousel.Caption>
+                                <h3>Climbing mountains in Banff Alberta</h3>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                    </Carousel>
                 </Col>
             </Row>
         </Container>

@@ -11,6 +11,7 @@
     width: 100%;
     padding: 1rem;
     text-align: right;
+    z-index: 9999;
 }
 
 .footer-text {
