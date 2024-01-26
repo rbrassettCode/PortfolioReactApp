@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './../Stylesheet.css';
+import { Card, Col, Container, Row, Button } from 'react-bootstrap';
 
 function Wordle() {
     const [word, setWord] = useState(pickRandomWord());
@@ -7,12 +8,14 @@ function Wordle() {
     const [currentGuess, setCurrentGuess] = useState(Array(5).fill(''));
 
     function handleInputChange(e, index) {
-        const newGuess = [...currentGuess];
-        newGuess[index] = e.target.value;
-        setCurrentGuess(newGuess);
-        
-        if (index < 4 && e.target.value) {
-            document.getElementById(`input-${index+1}`).focus();
+        if(/^[a-zA-Z]$/.test(e.target.value) || e.target.value === '') {
+            const newGuess = [...currentGuess];
+            newGuess[index] = e.target.value;
+            setCurrentGuess(newGuess);
+            
+            if (index < 4 && e.target.value) {
+                document.getElementById(`input-${index+1}`).focus();
+            }
         }
     }
     
@@ -21,6 +24,7 @@ function Wordle() {
         if (guessString.length !== 5 || guesses.includes(guessString)) return;
         setGuesses(prev => [...prev, guessString]);
         setCurrentGuess(Array(5).fill(''));
+        document.getElementById(`input-0`).focus();
     }
 
     function feedback(guess) {
@@ -31,22 +35,38 @@ function Wordle() {
         });
     }
 
+    const handleKeyPress = (e, index) => {
+        if(e.key === 'Backspace') {
+            if(currentGuess[index] === null || currentGuess[index] === '') {
+                console.log(e);
+                if (index > 0) {
+                    console.log("backspace pressed.")
+                    document.getElementById(`input-${index-1}`).focus();
+                }
+            }
+            else {
+
+            }
+        }
+        else if(e.key === 'ArrowLeft') {
+            if (index > 0) {
+                document.getElementById(`input-${index-1}`).focus();
+            }
+        }
+        else if(e.key === 'ArrowRight') {
+            if (index < 4) {
+                document.getElementById(`input-${index+1}`).focus();
+            }
+        }
+        else if (e.key === 'Enter'){
+            handleGuess();
+        }
+
+    }
+
     return (
         <div className="wordle-container">
             <h1>Wordle Game</h1>
-            <div className="input-boxes">
-                {currentGuess.map((char, index) => (
-                    <input 
-                        key={index} 
-                        id={`input-${index}`} 
-                        maxLength="1" 
-                        value={char} 
-                        onChange={e => handleInputChange(e, index)} 
-                    />
-                ))}
-            </div>
-            <button type="submit" onClick={handleGuess} >Guess</button>
-
             {guesses.map((guess, index) => (
                 <div className='guesses' key={index}>
                     {guess.split('').map((char, i) => (
@@ -56,6 +76,22 @@ function Wordle() {
                     ))}
                 </div>
             ))}
+            
+            <div className="input-boxes">
+                {currentGuess.map((char, index) => (
+                    <input 
+                    key={index} 
+                    id={`input-${index}`} 
+                    maxLength="1"
+                    value={char} 
+                    onChange={e => handleInputChange(e, index)}
+                    onKeyDown={e => handleKeyPress(e, index)} tabIndex="0"
+                />
+                ))}
+            </div>
+            <button type="submit" onClick={handleGuess} >Guess</button>
+
+            
         </div>
     );
 }
