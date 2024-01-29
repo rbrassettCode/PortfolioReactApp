@@ -5,6 +5,8 @@ import { createToDo } from './../graphql/mutations';
 import TaskCard from './TaskCard';
 import './../Stylesheet.css';
 import CreateTaskModal from "./CreateTaskModal.js";
+import {Button, Col, Row, Container, Card,  Modal, InputGroup} from 'react-bootstrap'
+import { deleteTask } from './../graphql/mutations';
 
 
 function TaskBoard() {
@@ -27,6 +29,25 @@ function TaskBoard() {
 
     function removeTaskFromState(taskId) {
         setDataList(prevTasks => prevTasks.filter(task => task.id !== taskId));
+        handleDelete(taskId)
+    }
+
+    const handleDelete = async (id) => {
+        console.log("Deleting task: ", id);
+        try{
+            const temp = await API.graphql({
+            query: deleteTask,
+            variables: {
+                input: { 
+                    "id": id
+                }
+            }
+            });
+            console.log(temp);
+        } catch (error) {
+            console.error("An error occurred:", error);
+        }
+       
     }
 
     function addTaskFromState(task) {
@@ -36,52 +57,100 @@ function TaskBoard() {
     
     return (
         <div>
-            <button type='submit' onClick={() => setModalOpen(true)}>Create Task</button>
-            <CreateTaskModal addTaskFromState={addTaskFromState} isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
-            <div className="task-board-container">
-                <h2>Task Board</h2>
-                <div className="task-board">
-                    <div className="task-board-column">
-                        <h3>To Do</h3>
-                        {allTasks
-                        .filter((task) => task.status === "TODO")
-                        .map((task) => (
-                            <TaskCard 
-                            key={task.id}
-                            id={task.id}
-                            title={task.title}
-                            description={task.description}
-                            onTaskDeleted={removeTaskFromState}
-                            />))}
-                    </div>
-                    <div className="task-board-column">
-                        <h3>In Progress</h3>
-                        {allTasks
-                        .filter((task) => task.status === "IN_PROGRESS")
-                        .map((task) => (
-                            <TaskCard 
-                            key={task.id}
-                            id={task.id}
-                            title={task.title}
-                            description={task.description}
-                            onTaskDeleted={removeTaskFromState}
-                            />))}
-                    </div>
-                    <div className="task-board-column">
-                        <h3>Completed</h3>
-                        {allTasks
-                        .filter((task) => task.status === "COMPLETE")
-                        .map((task) => (
-                            <TaskCard 
-                            key={task.id}
-                            id={task.id}
-                            title={task.title}
-                            description={task.description}
-                            onTaskDeleted={removeTaskFromState}
-                            />))}
-                    </div>
-                </div>
-            </div>
+            <Container>
+
+                <Row>
+                    <Col className="col-12 mx-auto" md={4}>
+                        <Button variant='primary' size="lg" type='submit' onClick={() => setModalOpen(true)}> Create New Task</Button>
+                    </Col>
+
+                    <Modal show={isModalOpen} onHide={() => setModalOpen(false)}>
+                        <Modal.Header closeButton>
+                            <Modal.Title>Create Task</Modal.Title>
+                            <Modal.Body>
+                                <InputGroup>
+                                    
+                                </InputGroup>
+                            </Modal.Body>
+                            <Modal.Footer>
+                                <Button>
+                                    submit
+                                </Button>
+                            </Modal.Footer>
+                        </Modal.Header>
+                    </Modal>
+
+                </Row>
+                <Row>
+                    <h2>Task Board</h2>
+                </Row>
+                <Row>
+                    <Col className="col-12" md={6} lg={4}>
+                        <Row>
+                            <h2>To Do</h2>
+                        </Row>
+                            <Col className="col-12">
+                                {allTasks
+                                    .filter((task) => task.status === "TODO")
+                                    .map((task) => (
+                                        <Row className="p-4">
+                                            <Card className='p-4' style={{ background: 'linear-gradient(to right, #3498db, #9b59b6)' }} key={task.id} id={task.id}>
+                                                <Card.Body>
+                                                    <Card.Title>{task.title}</Card.Title>
+                                                    <Card.Text>
+                                                        {task.description}
+                                                    </Card.Text>
+                                                    <Button  onClick={() => removeTaskFromState(task.id)}>X</Button>
+                                                </Card.Body>
+                                            </Card>
+                                        </Row>
+                                ))}
+                            </Col>
+                    </Col>
+                    <Col className="col-12" md={6} lg={4}>
+                        <Row>
+                            <h2>In Progress</h2>
+                        </Row>
+                            <Col className="col-12">
+                                {allTasks
+                                    .filter((task) => task.status === "IN_PROGRESS")
+                                    .map((task) => (
+                                        <Row className="p-4">
+                                            <Card className='p-4' style={{ background: 'linear-gradient(to right, #3498db, #9b59b6)' }} key={task.id}>
+                                                <Card.Body>
+                                                    <Card.Title>{task.title}</Card.Title>
+                                                    <Card.Text>
+                                                        {task.description}
+                                                    </Card.Text>
+                                                </Card.Body>
+                                            </Card>
+                                        </Row>
+                                ))}
+                            </Col>
+                    </Col>
+                    <Col className="col-12" md={6} lg={4}>
+                        <Row>
+                            <h2>Completed</h2>
+                        </Row>
+                            <Col className="col-12">
+                                {allTasks
+                                    .filter((task) => task.status === "COMPLETE")
+                                    .map((task) => (
+                                        <Row className="p-4">
+                                            <Card className='p-4' style={{ background: 'linear-gradient(to right, #3498db, #9b59b6)' }} key={task.id}>
+                                                <Card.Body>
+                                                    <Card.Title>{task.title}</Card.Title>
+                                                    <Card.Text>
+                                                        {task.description}
+                                                    </Card.Text>
+                                                </Card.Body>
+                                            </Card>
+                                        </Row>
+                                ))}
+                            </Col>
+                    </Col>
+                </Row>
+            </Container>
         </div>
     );
 }

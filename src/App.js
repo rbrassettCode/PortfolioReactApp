@@ -42,7 +42,6 @@ function App() {
         <Route path="/portfolio/Wordle" element={<Wordle/>} />
         <Route path="/portfolio/TaskBoard" element={<TaskBoard/>} />
         <Route path="/portfolio/PlantMonitor" element={<PlantMonitor/>} />
-
       </Routes>
       <Footer/>
     </Router>
