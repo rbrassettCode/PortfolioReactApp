@@ -14,7 +14,8 @@ function PlantMonitor() {
                 const response = await API.graphql({
                     query: listPlantStatuses
                 });
-                setDataList(response.data.listPlantStatuses.items);
+                
+                setDataList(sortList(response.data.listPlantStatuses.items));
                 console.log("Data has been aquired:", response.data);
             } catch (error) {
                 console.error("Error fetching data:", error);
@@ -22,7 +23,13 @@ function PlantMonitor() {
         }
         fetchData();
     }, []);
-
+    
+    function sortList(list) {
+        list.sort((a, b) => {
+            return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime();
+        });
+        return list;
+    }
     return (
         <div>
             <h2>Plant Data</h2>
