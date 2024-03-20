@@ -17,6 +17,7 @@ import TaskBoard from './pages/TaskBoard';
 import {Amplify} from 'aws-amplify';
 import awsconfig from './aws-exports';
 import PlantMonitor from './pages/PlantMonitor';
+import DeveloperTab from './pages/DeveloperTab';
 
 function App() {
   
@@ -42,6 +43,7 @@ function App() {
         <Route path="/portfolio/Wordle" element={<Wordle/>} />
         <Route path="/portfolio/TaskBoard" element={<TaskBoard/>} />
         <Route path="/portfolio/PlantMonitor" element={<PlantMonitor/>} />
+        <Route path="/portfolio/DeveloperTab" element={<DeveloperTab/>} />
       </Routes>
       <Footer/>
     </Router>
